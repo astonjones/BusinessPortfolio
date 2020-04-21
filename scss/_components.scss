@@ -1,0 +1,167 @@
+//BUTTONS// 
+
+.btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1rem 1.4rem;
+    background-color: blue;
+    height: 4rem;
+    line-height: 2rem;
+    border-radius: .4rem;
+    letter-spacing: .035rem;
+    @include button_shadow;
+    transition: all .15s ease;
+    text-decoration: none !important;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    border: none;
+    outline: none;
+    
+    &:hover {
+        @include button_shadow_hover;
+        transform: translateY(-.1rem);
+        color: hsl(0, 0%, 100%);
+    }
+
+    &:active {
+        @include button_shadow_active;
+        transform: translateY(.1rem);
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+//CARDS//
+.service-card {
+    margin-bottom: 5rem;
+    
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 2.8rem;
+        @include stripe_shadow;
+        transition: all .15s;
+        border-radius: .8rem;
+        background-color: white;
+
+        @include md {
+            display: flex;
+        }
+
+        &:hover {
+            @include stripe_shadow_hover;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(2px);
+            background-color: hsl(0, 0%, 97%);
+        }
+    }
+
+    &__text {
+        margin-top: 1.2rem;
+        max-width: 391.88px; 
+        color: #000000;
+
+        @include md {
+            max-width: 49rem;
+        }
+
+    }
+
+    &__image {
+        margin-right: 2.4rem;
+        height: 6rem;
+        width: 6rem; //WON'T BE 60PX IF YOU CHOOSE 60PX. SOME BULL ISH.
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+    }
+}
+
+//FORMS//
+
+.form-container {
+    box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), 0 -18px 60px -10px rgba(0,0,0,.025);
+    border-radius: .4rem;
+    padding: 0;
+    margin: 0 1.5rem 0;
+    background-color: white;
+
+    @include md {
+        padding: 0 1.5rem 0;
+        margin: 0;
+    }
+    .contact-form {
+        @include md {
+            padding: 1rem 1.8rem 2rem 2.4rem;
+        }
+        fieldset {
+            .form-row {
+                padding: .8rem 1.3rem .2rem 1.7rem;
+                flex-direction: column;
+                border-bottom: .1rem solid hsl(0, 0, 90%);
+
+                @include md {
+                    flex-direction: row;
+                    border: none;
+                    padding: .4rem 0;
+                }
+
+                label {
+                    font-weight: 600;
+                    line-height: 2.6rem;
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+
+                    @include md {
+                        font-size: 1.7rem;
+                        margin-right: 2rem;
+                        flex: 32%;
+                        margin-bottom: 0;
+                        flex: 32%;
+                        align-self: center;
+                        text-transform: unset;
+                    }
+                }
+
+                input,
+                textarea {
+                    border-radius: .4rem;
+                    transition: all .15s;
+                    border: none;
+                    padding: .5rem 2rem .8rem 0;
+
+                    @include md {
+                        padding: .55rem 1.3rem .85rem;
+                        flex: 68%;
+                        background-color: hsl(210, 50%, 98%);
+                    }
+                    
+                    &::placeholder {
+                        font-size: 1.7rem;
+                        line-height: 2.6rem;
+                    }
+
+                    &:focus {
+                        background-color: hsl(0, 0%, 100%);
+                    }
+                }
+            }
+
+            .submit-row {
+                padding: 1.2rem 1rem 1.3rem;
+
+                @include md {
+                    padding: 1.2rem 0 0;
+                }
+            }
+        }
+    }
+}

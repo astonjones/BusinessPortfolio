@@ -1,0 +1,31 @@
+.footer {
+    padding: 3rem 0rem;
+    background-color: #021446;
+
+    &__content {
+        color: white;
+        &__info {
+            display: flex;
+            justify-content: space-evenly;
+            .footer-section {
+
+                h4 {
+                    font-size: 2rem;
+                }
+                ul {
+                    list-style: none;
+                    margin-left: 1rem;
+                    padding: 0;
+                }
+
+                li {
+                    padding-bottom: 1rem;
+                }
+
+                a {
+                    color:  white;
+                }
+            }
+        }
+    }
+}

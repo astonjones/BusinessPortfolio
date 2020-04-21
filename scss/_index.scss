@@ -1,0 +1,15 @@
+header {
+    margin: 0 auto;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(40rem, 1fr));
+    align-items: center;
+    padding: 7rem 2rem;
+
+    .header-image {
+        justify-self: center;
+        z-index: -1;
+    }
+}
